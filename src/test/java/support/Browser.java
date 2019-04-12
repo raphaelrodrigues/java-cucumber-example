@@ -5,11 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
+// raphael.rodrigues@vilt-group.com
 public class Browser {
 	
 	public static WebDriver launch() {
-		System.setProperty("webdriver.chrome.driver","/opt/chromedriver");
+		// System.setProperty("webdriver.chrome.driver","/opt/chromedriver");
 		String browser = System.getProperty("browser");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("headless", "window-size=1200,600");
