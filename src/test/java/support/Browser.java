@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Browser {
 	
 	public static WebDriver launch() {
+		System.setProperty("webdriver.chrome.driver","/chromedriver");
 		String browser = System.getProperty("browser");
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--headless");
-		chromeOptions.addArguments("--window-size=1200x600");
-		return new ChromeDriver(chromeOptions);
+		chromeOptions.addArguments("headless", "window-size=1200,600");
+		ChromeDriver driver = new ChromeDriver(chromeOptions);
+		return driver;
 	}
 }
